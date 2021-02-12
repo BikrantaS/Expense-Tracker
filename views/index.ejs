@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <%- include('./partials/header.ejs') %>
+
+            <form class="item" action="/" method="post">
+              <input class="date" type="date" name="date" placeholder="Date" autocomplete="off">
+              <input class="time" type="time" name="time" placeholder="Time" autocomplete="off">
+              <input class="name" type="text" name="name" placeholder="Name" autocomplete="off">
+              <input class="description" type="text" name="description" placeholder="Description" autocomplete="off">
+              <input class="amount" type="text" name="amount" placeholder="Amount" autocomplete="off">
+              <button class="buto" type="submit" name="list" value=<%= listTitle %>>+</button>
+            </form>
+
+
+            <div>
+              <ul>
+                <% for (var i=0;i<expenselist.length;i++){ %>
+                  <li class="item">
+                    <p class="date"><%= expenselist[i].date %></p>
+                    <p class="time"><%= expenselist[i].time %></p>
+                    <p class="name"><%= expenselist[i].name %></p>
+                    <p class="description"><%= expenselist[i].description %></p>
+                    <p class="amount"><%= expenselist[i].amount %></p>
+                  </li>
+                <% } %>
+              </ul>
+            </div>
+
+    <%- include('./partials/footer.ejs') %>

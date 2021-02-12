@@ -1,0 +1,95 @@
+*{
+  margin: 0;
+  padding: 0;
+  background-color: #CCCCCC;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@900&family=Passion+One:wght@700&family=Raleway:wght@700&family=Staatliches&display=swap');
+
+
+body{
+
+}
+
+input{
+  border-radius: 25px;
+  padding: 0 2px;
+}
+
+.topcontainer{
+  padding:1% 0 5% 0;
+  display:flex ;
+  justify-content: space-between;
+  /* background: rgba(0, 128, 0, 0.3); */
+
+}
+
+.leftcontainer li{
+  /* display: flex;
+  text-align: center;
+  justify-content: space-between; */
+  color: black;
+  display: inline-block;
+  padding: 4px 15px;
+  flex:2;
+}
+.leftcontainer li a{
+  color: black;
+}
+
+
+.rightcontainer{
+  padding: 4px 15px;
+  text-align: center;
+  flex:2;
+}
+.rightcontainer a{
+  color: black;
+}
+
+.midcontainer{
+  text-align: center;
+  flex:11;
+}
+
+a{
+  text-decoration: none;
+  list-style-type:none;
+}
+nav ul{
+  list-style-type:none;
+}
+
+.item{
+  display: flex;
+  padding:0 5px;
+}
+
+.date{
+  flex:3;
+}
+.time{
+  flex:1;
+}
+
+.name{
+  flex:5;
+}
+
+.description{
+  flex:10;
+}
+
+.amount{
+  flex:5;
+}
+ .buto{
+   flex:1;
+   border-radius: 25px;
+   background-color: #01955A;
+   opacity: 0.6;
+   color: white;
+  font-family: 'Maven Pro', sans-serif;
+ }
+ .button:hover {opacity: 1}
