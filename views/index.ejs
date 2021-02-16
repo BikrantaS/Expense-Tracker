@@ -11,18 +11,17 @@
             </form>
 
 
-            <div>
-              <ul>
+
                 <% for (var i=0;i<expenselist.length;i++){ %>
-                  <li class="item">
-                    <p class="date"><%= expenselist[i].date %></p>
-                    <p class="time"><%= expenselist[i].time %></p>
-                    <p class="name"><%= expenselist[i].name %></p>
-                    <p class="description"><%= expenselist[i].description %></p>
-                    <p class="amount"><%= expenselist[i].amount %></p>
-                  </li>
+                  <div class="row">
+                    <div class="date column" style="background-color:#aaa;"><%= expenselist[i].date %></div>
+                    <div class="time column" style="background-color:#bbb;"><%= expenselist[i].time %></div>
+                    <div class="name column" style="background-color:#ccc;"><%= expenselist[i].name %></div>
+                    <div class="description column" style="background-color:#5dd;"><%= expenselist[i].description %></div>
+                    <div class="amount column" style="background-color:#20f;"><%= expenselist[i].amount %></div>
+                  </div>
                 <% } %>
-              </ul>
-            </div>
+
+
 
     <%- include('./partials/footer.ejs') %>

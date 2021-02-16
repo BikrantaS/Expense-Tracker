@@ -1,7 +1,8 @@
 *{
   margin: 0;
   padding: 0;
-  background-color: #DFE2CC;
+  background-color: #DF33CC;
+  box-sizing: border-box;
 }
 
 
@@ -12,38 +13,32 @@ body{
 
 }
 
-input{
-  border-radius: 25px;
-  padding: 0 2px;
-}
 
+
+/* Header Design */
 .topcontainer{
   padding:1% 0 5% 0;
   display:flex ;
   justify-content: space-between;
   background-color: red;
-
 }
+
 .leftcontainer{
   background-color: inherit;
 }
 
-
 .leftcontainer li{
-  /* display: flex;
-  text-align: center;
-  justify-content: space-between; */
   color: black;
   display: inline-block;
   padding: 4px 15px;
   flex:2;
   background-color: inherit;
 }
+
 .leftcontainer li a{
   color: black;
   background-color: inherit;
 }
-
 
 .rightcontainer{
   padding: 4px 15px;
@@ -51,10 +46,10 @@ input{
   flex:2;
   background-color: inherit;
 }
+
 .rightcontainer a{
   background-color: inherit;
 }
-
 
 .midcontainer{
   text-align: center;
@@ -66,32 +61,49 @@ a{
   text-decoration: none;
   list-style-type:none;
 }
+
 nav ul{
   list-style-type:none;
 }
 
+
+/* Ipnut from user */
+input{
+  border-radius: 25px;
+  padding: 0 2px;
+  background-color: #2F11AC;
+}
+
+
+/* item displasy */
+
+.column{
+    display: inline-block;
+    border-radius: 5px;
+}
+
 .item{
   display: flex;
-  padding:0 5px;
 }
 
 .date{
-  flex:3;
+  width: 10%;
 }
+
 .time{
-  flex:1;
+  width: 10%;
 }
 
 .name{
-  flex:5;
+  width: 10%;
 }
 
 .description{
-  flex:10;
+  width: 40%;
 }
 
 .amount{
-  flex:5;
+  width: 20%;
 }
  .buto{
    flex:1;
@@ -101,4 +113,5 @@ nav ul{
    color: white;
   font-family: 'Maven Pro', sans-serif;
  }
+
  .buto:hover {opacity: 1}
