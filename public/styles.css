@@ -1,7 +1,7 @@
 *{
   margin: 0;
   padding: 0;
-  background-color: #CCCCCC;
+  background-color: #DFE2CC;
 }
 
 
@@ -21,9 +21,13 @@ input{
   padding:1% 0 5% 0;
   display:flex ;
   justify-content: space-between;
-  /* background: rgba(0, 128, 0, 0.3); */
+  background-color: red;
 
 }
+.leftcontainer{
+  background-color: inherit;
+}
+
 
 .leftcontainer li{
   /* display: flex;
@@ -33,9 +37,11 @@ input{
   display: inline-block;
   padding: 4px 15px;
   flex:2;
+  background-color: inherit;
 }
 .leftcontainer li a{
   color: black;
+  background-color: inherit;
 }
 
 
@@ -43,14 +49,17 @@ input{
   padding: 4px 15px;
   text-align: center;
   flex:2;
+  background-color: inherit;
 }
 .rightcontainer a{
-  color: black;
+  background-color: inherit;
 }
+
 
 .midcontainer{
   text-align: center;
   flex:11;
+  background-color: inherit;
 }
 
 a{
@@ -92,4 +101,4 @@ nav ul{
    color: white;
   font-family: 'Maven Pro', sans-serif;
  }
- .button:hover {opacity: 1}
+ .buto:hover {opacity: 1}
