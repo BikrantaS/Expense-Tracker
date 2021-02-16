@@ -1,27 +1,53 @@
 <!DOCTYPE html>
     <%- include('./partials/header.ejs') %>
 
-            <form class="item" action="/" method="post">
-              <input class="date" type="date" name="date" placeholder="Date" autocomplete="off">
-              <input class="time" type="time" name="time" placeholder="Time" autocomplete="off">
-              <input class="name" type="text" name="name" placeholder="Name" autocomplete="off">
-              <input class="description" type="text" name="description" placeholder="Description" autocomplete="off">
-              <input class="amount" type="text" name="amount" placeholder="Amount" autocomplete="off">
-              <button class="buto" type="submit" name="list" value=<%= listTitle %>>+</button>
-            </form>
+    <div class="inputbox">
 
+
+
+              <div class="itemname">
+                <p class="date">DATE</p>
+                <p class="time">TIME</p>
+                <p class="name">NAME</p>
+                <p class="description">DESCRIPTION</p>
+                <p class="amount">AMOUNT</p>
+              </div>
+
+            <form action="/" method="post">
+              <div class="item">
+                <input class="date sizing" type="date" name="date" placeholder="Date" autocomplete="off">
+                <input class="time sizing" type="time" name="time" placeholder="time when spent" autocomplete="off">
+                <input class="name sizing" type="text" name="name" placeholder="name of item" autocomplete="off">
+                <input class="description sizing" type="text" name="description" placeholder="brief description" autocomplete="off">
+                <input class="amount sizing" type="text" name="amount" placeholder="enter amount" autocomplete="off">
+              </div>
+              <button class="buto sizing "  style="text-align: center;" type="submit" name="list" value=<%= listTitle %>>+</button>
+            </form>
+            
+      </div>
+
+
+      <div class="list">
+
+        <div class="itemname">
+          <p class="date">DATE</p>
+          <p class="time">TIME</p>
+          <p class="name">NAME</p>
+          <p class="description">DESCRIPTION</p>
+          <p class="amount">AMOUNT</p>
+        </div>
 
 
                 <% for (var i=0;i<expenselist.length;i++){ %>
                   <div class="row">
-                    <div class="date column" style="background-color:#aaa;"><%= expenselist[i].date %></div>
+                    <div class="date column" style="background-color:#ccc;"><%= expenselist[i].date %></div>
                     <div class="time column" style="background-color:#bbb;"><%= expenselist[i].time %></div>
                     <div class="name column" style="background-color:#ccc;"><%= expenselist[i].name %></div>
-                    <div class="description column" style="background-color:#5dd;"><%= expenselist[i].description %></div>
-                    <div class="amount column" style="background-color:#20f;"><%= expenselist[i].amount %></div>
+                    <div class="description column" style="background-color:#bbb;"><%= expenselist[i].description %></div>
+                    <div class="amount column" style="background-color:white;"><%= expenselist[i].amount %></div>
                   </div>
                 <% } %>
 
-
+      </div>
 
     <%- include('./partials/footer.ejs') %>
