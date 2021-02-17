@@ -7,7 +7,7 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@900&family=Passion+One:wght@700&family=Raleway:wght@700&family=Staatliches&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
 body{
 
@@ -144,20 +144,18 @@ input{
    opacity: 1;
    color: white;
   font-family: 'Maven Pro', sans-serif;
-  text-align: center;
-  width:40%;
-  padding: 0.8%;
-  margin: auto;
-  display: flex;
-  
- }
+  font-size: 1.2rem;
+  float:left;
+  width: 44%;
+  margin: 2px 3%;
+  padding: 1% 11%;
+}
 
  .buto:hover {
    opacity: 1;
    background-color: #00B779;
-  text-align: center;
  }
 
  .list{
-   padding:4% 0 10% 0;
+   padding:7% 0 6% 0;
  }
