@@ -13,27 +13,11 @@ app.use(express.static("public"));//to call static files in html page
 
 const expenselist=[];//initialising array
 
-
-
-
-
 //GET request render the root route
 app.get('/',(req,res)=>{
   res.render('index',{listTitle:"hookah",expenselist});
 
-      //writing in file
-      for (var i=0;i<expenselist.length;i++)
-      {
-        let a=expenselist[i].date;
-        let b=expenselist[i].time;
-        let c=expenselist[i].name;
-        let d=expenselist[i].description;
-        let e=expenselist[i].amount;
-        let text=a+" "+b+" "+c+" "+d+" "+e+" ";
-        fs.writeFile('./docs/blog1.txt',text,()=>{
-          console.log('file was written');
-        });
-      }
+
 });
 
 
@@ -52,7 +36,31 @@ app.post('/',(req,res)=>{
 
   expenselist.push(data);//inserting the expenselist array
   console.log(expenselist);
+
+  //writing in file
+  var t="";
+  for (var i=0;i<expenselist.length;i++)
+  {
+    let a=expenselist[i].date;
+    let b=expenselist[i].time;
+    let c=expenselist[i].name;
+    let d=expenselist[i].description;
+    let e=expenselist[i].amount;
+    let text=a+" "+b+" "+c+" "+d+" "+e+" "+"\n";
+    t=t+text;
+    fs.writeFile('./docs/blog1.txt',t,()=>{
+      console.log('file was written');
+    });
+  }
+
   res.redirect("/");//redirecting to render final result
+});
+
+
+//Download the file
+app.get('/download', function(req, res){
+  const file = `${__dirname}/docs/blog1.txt`;
+  res.download(file); // Set disposition and send it.
 });
 
 app.listen(process.env.PORT || 3000);
