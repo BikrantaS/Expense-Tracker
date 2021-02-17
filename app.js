@@ -1,6 +1,7 @@
 const express=require("express");
 const app=express();//using instance of express
 const bodyParser=require("body-parser");//to parse through the html page
+const fs=require('fs');//file stream library instance
 
 app.set('view engine','ejs');
 
@@ -13,9 +14,26 @@ app.use(express.static("public"));//to call static files in html page
 const expenselist=[];//initialising array
 
 
+
+
+
 //GET request render the root route
 app.get('/',(req,res)=>{
   res.render('index',{listTitle:"hookah",expenselist});
+
+      //writing in file
+      for (var i=0;i<expenselist.length;i++)
+      {
+        let a=expenselist[i].date;
+        let b=expenselist[i].time;
+        let c=expenselist[i].name;
+        let d=expenselist[i].description;
+        let e=expenselist[i].amount;
+        let text=a+" "+b+" "+c+" "+d+" "+e+" ";
+        fs.writeFile('./docs/blog1.txt',text,()=>{
+          console.log('file was written');
+        });
+      }
 });
 
 
